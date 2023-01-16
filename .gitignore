@@ -1,0 +1,8 @@
+﻿################################################################################
+# Ten plik .gitignore został utworzony automatycznie przez Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ContactBookRest/v16
+/ContactBookRest/obj
+/ContactBookRest/bin/Debug/netcoreapp3.1
+/.vs/ContactBookRest
