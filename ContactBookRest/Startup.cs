@@ -18,6 +18,7 @@ namespace ContactBookRest
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            DBAccess.ConnectionStringSql = configuration.GetConnectionString("ContactBookConnectionString");
         }
 
         public IConfiguration Configuration { get; }

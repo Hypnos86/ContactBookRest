@@ -4,23 +4,30 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContactBookRest.Models;
+using ContactBookRest.Repository;
 
 namespace ContactBookRest.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class BookController : ControllerBase
+	public class BookController : Controller
     {
 
-		[HttpGet("book")]
-		public string MyController()
+		[HttpGet("allcontact")]
+		public ActionResult GetAllContact()
 		{
-			string myprop = "kamil";
+			BaseRepository baseRepository = new BaseRepository(); 
+			List<Contact> result = baseRepository.GetAllContact();
+			return Json(result);
+		}
 
-
-			return myprop;
-
-		
+		[HttpGet("test")]
+		public ActionResult Test()
+		{
+			BaseRepository baseRepository = new BaseRepository();
+			string result = baseRepository.GetTest();
+			return Json(result);
 		}
 	}
 }

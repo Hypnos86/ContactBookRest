@@ -4,13 +4,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controlers\**" />
+    <Content Remove="Controlers\**" />
+    <EmbeddedResource Remove="Controlers\**" />
+    <None Remove="Controlers\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <None Remove="DBAccess.cs~RF87921d.TMP" />
     <None Remove="Models\" />
     <None Remove="Controlers\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Controlers\" />
+    <PackageReference Include="NLog" Version="5.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 </Project>

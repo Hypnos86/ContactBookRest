@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ContactBook.Models
+namespace ContactBookRest.Models
 {
     public class Contact
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public List<PhoneNumber> Numbers { get; set; }
+        //public List<StringPhoneNumber> Numbers { get; set; }
+        public string Numbers { get; set; }
 
     }
+
+    public class StringPhoneNumber
+    {
+        public string Number { get; set; }
+    }
+
 }

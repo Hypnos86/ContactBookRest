@@ -1,4 +1,4 @@
-﻿namespace ContactBook.Models
+﻿namespace ContactBookRest.Models
 {
     public class PhoneNumber
     {
